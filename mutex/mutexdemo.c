@@ -12,6 +12,7 @@ void *inc_thread (void *arg)
     while(1)
     {
         pthread_mutex_lock(&count_mutex);
+        pthread_mutex_lock(&count_mutex);
         count++;
         printf("inc thread:%d\n",count);
         pthread_mutex_unlock(&count_mutex);
